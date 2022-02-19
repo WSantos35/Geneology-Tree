@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UrlResolver } from '@angular/compiler';
+import { IfStmt, UrlResolver } from '@angular/compiler';
 @Injectable({
   providedIn: 'root'
 })
@@ -114,6 +114,13 @@ export class TreeServiceService {
   private getHijo(Hijos,posHijo){
     if(Hijos!=null){
       if(Hijos.length>posHijo){
+        if(posHijo==this.posHijoDe){
+          if(Hijos[posHijo].binary_placement=="Left"){
+            const tmpDerecha = this.DataTree.HijoIz;
+            this.DataTree.HijoIz = Hijos[posHijo];
+            return tmpDerecha;
+          }
+        }
         return Hijos[posHijo];
       }else{
         return null;

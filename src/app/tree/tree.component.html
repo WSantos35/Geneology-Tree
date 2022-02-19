@@ -1,6 +1,19 @@
 <div class="container">
     <div class="row">
         <div class="col">
+
+        </div>
+        <div class="col">
+            <h1 class="Title text-center">{{Title}}</h1>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
         </div>
         <div class="col">
             <!--AREA DEL PADRE-->
@@ -8,20 +21,21 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>{{DataTree.Padre.distributor_id}}</td>
+                            <td class="TitleTable">{{DataTree.Padre.distributor_id}}</td>
+                            <td class="TitleTable"></td>
                         </tr>
                         <tr>
                             <td>{{DataTree.Padre.full_name}}</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td><button>Ver</button></td>
-                            <td><button (click)="Ver_Padre(DataTree.Padre)">Padre anterior</button></td>
+                            <td><button type="button" (click)=CargarDatosModal(DataTree.Padre) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
+                            <td><button type="button" (click)="Ver_Padre(DataTree.Padre)">Padre</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <ng-template #elsePadre>
-                <p>NO EXISTE</p>
             </ng-template>
             <!--FIN AREA DEL PADRE-->
         </div>
@@ -35,20 +49,21 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>{{DataTree.HijoIz.distributor_id}}</td>
+                            <td class="TitleTable">{{DataTree.HijoIz.distributor_id}}</td>
+                            <td class="TitleTable"></td>
                         </tr>
                         <tr>
                             <td>{{DataTree.HijoIz.full_name}}</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td><button>Ver</button></td>
-                            <td><button (click)=Ver_Hijos(DataTree.HijoIz) >Ver Hijos</button></td>
+                            <td><button type="button" (click)=CargarDatosModal(DataTree.HijoIz) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
+                            <td><button type="button" (click)=Ver_Hijos(DataTree.HijoIz) >Hijos</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <ng-template #elseHijoiz>
-                <p>NO EXISTE</p>
             </ng-template>
             <!--FIN AREA HIJO IZ-->
         </div>
@@ -60,22 +75,83 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>{{DataTree.HijoDe.distributor_id}}</td>
+                            <td class="TitleTable">{{DataTree.HijoDe.distributor_id}}</td>
+                            <td class="TitleTable"></td>
                         </tr>
                         <tr>
                             <td>{{DataTree.HijoDe.full_name}}</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td><button>Ver</button></td>
-                            <td><button (click)=Ver_Hijos(DataTree.HijoDe)>Ver Hijos</button></td>
+                            <td>
+                                <button type="button" (click)=CargarDatosModal(DataTree.HijoDe) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button>
+                            </td>
+                            <td>
+                                <button type="button" (click)=Ver_Hijos(DataTree.HijoDe)>Hijos</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <ng-template #elseHijoDe>
-                <p>NO EXISTE</p>
             </ng-template>
             <!--FIN AREA HIJO DE-->
         </div>
     </div>
+</div>
+<div class="container">
+    <!--OFF BOOSTRAP-->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">{{DataModal.full_name}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table>
+              <tr>
+                  <td>Binary Placement</td>
+                  <td>{{DataModal.binary_placement}}</td>
+              </tr>
+              <tr>
+                <td>Category Name</td>
+                <td>{{DataModal.category_name}}</td>
+              </tr>
+              <tr>
+                <td>Distributor ID</td>
+                <td>{{DataModal.distributor_id}}</td>
+              </tr>
+              <tr>
+                  <td>Num. Children</td>
+                  <td>{{DataModal.num_children}}</td>
+              </tr>
+              <tr>
+                <td>Parent  ID</td>
+                <td>{{DataModal.parent_id}}</td>
+            </tr>
+            <tr>
+                <td>Parent Username</td>
+                <td>{{DataModal.parent_username}}</td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
+                <td>{{DataModal.product_name}}</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>{{DataModal.status}}</td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>{{DataModal.username}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
