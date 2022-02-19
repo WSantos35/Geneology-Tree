@@ -2,26 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
-## Development server
+Para poder desarrollar este proyecto se utilizo:
+<ul>
+    <li>Angular</li>
+    <li>Boostrap</li>
+    <li>CSS</li>
+</ul>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<div style="text-align: justify;">
+El siguiente proyecto muestra una intefaz de usuario con un forma de diagrama de arbol binario, los datos utilizados para esta estructura se encuentra en un archivo json donde contiene n niveles de profundida, por lo tanto, la estructura cuenta con la opción de poder desplazarse a traves de los niveles y mostrar la información de cada nodo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Así como tambien tiene la opción de poder navegar de regreso hacia el padre anterior.
 
-## Build
+A continuación se muestra la vista Web y la vista movil de como se muestra el resultado final. este tambien lo puede visualizar en el siguiente enlace ya sea en navegador de escritorio o navegador móvil.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<a href="https://wsantos35.github.io/Geneology-Tree/">Geneology-Tree</a>
+</div>
 
-## Running unit tests
+<p><b>Vista Web</b></p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Vista Web](documentation/img/imgWeb.png)
 
-## Running end-to-end tests
+<p><b>Vista Movil</b></p>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![Vista Movil](documentation/img/imgMovil.png)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
