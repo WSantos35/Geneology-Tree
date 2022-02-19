@@ -1,1 +1,81 @@
-<p>tree works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <!--AREA DEL PADRE-->
+            <div *ngIf="DataTree.Padre; else elsePadre">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>{{DataTree.Padre.distributor_id}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{DataTree.Padre.full_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><button>Ver</button></td>
+                            <td><button (click)="Ver_Padre(DataTree.Padre)">Padre anterior</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ng-template #elsePadre>
+                <p>NO EXISTE</p>
+            </ng-template>
+            <!--FIN AREA DEL PADRE-->
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!--AREA HIJO IZ-->
+            <div *ngIf="DataTree.HijoIz; else elseHijoiz">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>{{DataTree.HijoIz.distributor_id}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{DataTree.HijoIz.full_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><button>Ver</button></td>
+                            <td><button (click)=Ver_Hijos(DataTree.HijoIz) >Ver Hijos</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ng-template #elseHijoiz>
+                <p>NO EXISTE</p>
+            </ng-template>
+            <!--FIN AREA HIJO IZ-->
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+            <!--AREA HIJO DE-->
+            <div *ngIf="DataTree.HijoDe; else elseHijoDe">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>{{DataTree.HijoDe.distributor_id}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{DataTree.HijoDe.full_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><button>Ver</button></td>
+                            <td><button (click)=Ver_Hijos(DataTree.HijoDe)>Ver Hijos</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ng-template #elseHijoDe>
+                <p>NO EXISTE</p>
+            </ng-template>
+            <!--FIN AREA HIJO DE-->
+        </div>
+    </div>
+</div>
