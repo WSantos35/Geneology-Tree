@@ -22,15 +22,23 @@
                     <tbody>
                         <tr>
                             <td class="TitleTable">{{DataTree.Padre.distributor_id}}</td>
-                            <td class="TitleTable"></td>
+                            
                         </tr>
                         <tr>
                             <td>{{DataTree.Padre.full_name}}</td>
-                            <td></td>
+                            
                         </tr>
                         <tr>
-                            <td><button type="button" (click)=CargarDatosModal(DataTree.Padre) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
-                            <td><button type="button" (click)="Ver_Padre(DataTree.Padre)">Padre</button></td>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" (click)=CargarDatosModal(DataTree.Padre) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
+                                            <td><button type="button" (click)="Ver_Padre(DataTree.Padre)">Padre</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -48,15 +56,19 @@
                     <tbody>
                         <tr>
                             <td class="TitleTable">{{DataTree.HijoIz.distributor_id}}</td>
-                            <td class="TitleTable"></td>
                         </tr>
                         <tr>
                             <td>{{DataTree.HijoIz.full_name}}</td>
-                            <td></td>
                         </tr>
                         <tr>
-                            <td><button type="button" (click)=CargarDatosModal(DataTree.HijoIz) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
-                            <td><button type="button" (click)=Ver_Hijos(DataTree.HijoIz) >Hijos</button></td>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><button type="button" (click)=CargarDatosModal(DataTree.HijoIz) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
+                                        <td><button type="button" (click)=Ver_Hijos(DataTree.HijoIz) >Hijos</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </tr>
                     </tbody>
                 </table>
@@ -73,18 +85,20 @@
                     <tbody>
                         <tr>
                             <td class="TitleTable">{{DataTree.HijoDe.distributor_id}}</td>
-                            <td class="TitleTable"></td>
                         </tr>
                         <tr>
                             <td>{{DataTree.HijoDe.full_name}}</td>
-                            <td></td>
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" (click)=CargarDatosModal(DataTree.HijoDe) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button>
-                            </td>
-                            <td>
-                                <button type="button" (click)=Ver_Hijos(DataTree.HijoDe)>Hijos</button>
+                                <table>
+                                   <tbody>
+                                    <tr>
+                                        <td><button type="button" (click)=CargarDatosModal(DataTree.HijoDe) data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver</button></td>
+                                        <td><button type="button" (click)=Ver_Hijos(DataTree.HijoDe)>Hijos</button></td>
+                                    </tr>
+                                   </tbody>
+                                </table>
                             </td>
                         </tr>
                     </tbody>
@@ -104,7 +118,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <table>
+          <table class="Modal">
               <tr>
                   <td>Binary Placement</td>
                   <td>{{DataModal.binary_placement}}</td>
