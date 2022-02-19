@@ -17,8 +17,8 @@
         </div>
         <div class="col">
             <!--AREA DEL PADRE-->
-            <div *ngIf="DataTree.Padre; else elsePadre">
-                <table>
+            <div *ngIf="DataTree.Padre;">
+                <table class="Change">
                     <tbody>
                         <tr>
                             <td class="TitleTable">{{DataTree.Padre.distributor_id}}</td>
@@ -35,8 +35,6 @@
                     </tbody>
                 </table>
             </div>
-            <ng-template #elsePadre>
-            </ng-template>
             <!--FIN AREA DEL PADRE-->
         </div>
         <div class="col">
@@ -45,8 +43,8 @@
     <div class="row">
         <div class="col">
             <!--AREA HIJO IZ-->
-            <div *ngIf="DataTree.HijoIz; else elseHijoiz">
-                <table>
+            <div *ngIf="DataTree.HijoIz;">
+                <table class="Change">
                     <tbody>
                         <tr>
                             <td class="TitleTable">{{DataTree.HijoIz.distributor_id}}</td>
@@ -63,16 +61,15 @@
                     </tbody>
                 </table>
             </div>
-            <ng-template #elseHijoiz>
-            </ng-template>
             <!--FIN AREA HIJO IZ-->
         </div>
         <div class="col">
+
         </div>
         <div class="col">
             <!--AREA HIJO DE-->
-            <div *ngIf="DataTree.HijoDe; else elseHijoDe">
-                <table>
+            <div *ngIf="DataTree.HijoDe;">
+                <table class="Change">
                     <tbody>
                         <tr>
                             <td class="TitleTable">{{DataTree.HijoDe.distributor_id}}</td>
@@ -93,8 +90,6 @@
                     </tbody>
                 </table>
             </div>
-            <ng-template #elseHijoDe>
-            </ng-template>
             <!--FIN AREA HIJO DE-->
         </div>
     </div>
